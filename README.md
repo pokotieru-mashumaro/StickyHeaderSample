@@ -1,6 +1,8 @@
 # StickyHeaderSample
 StickyHeaderたちの集会所
 
+***
+
 # インスタグラム風
 https://github.com/pokotieru-mashumaro/StickyHeaderSample/assets/121010614/52b4e790-4c02-47b3-a7cf-7110b1497cd0
 
