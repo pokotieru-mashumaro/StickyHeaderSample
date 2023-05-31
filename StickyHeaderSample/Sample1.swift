@@ -6,9 +6,9 @@
 import SwiftUI
 
 struct Sample1: View {
-    @State var HeaderHeightSize: CGFloat = 0 // MARK: headerの高さ +safeエリアの高さ
-    @State var HeaderOffsetY: CGFloat = 0 //直接使うやつ
-    @State var shiftOffset: CGFloat = 0 //offsetをキープ
+    @State var HeaderHeightSize: CGFloat = 0
+    @State var HeaderOffsetY: CGFloat = 0
+    @State var shiftOffset: CGFloat = 0 
     @State var direction: SwipeDirection = .none
     @State var lastHeaderOffset: CGFloat = 0
 
@@ -54,24 +54,38 @@ struct Sample1: View {
 
     @ViewBuilder
     func HeaderView() -> some View {
-        let progress = -(HeaderOffsetY / (HeaderHeightSize - 80)) > 1 ? -1 : (HeaderOffsetY > 0 ? 0 : (HeaderOffsetY / (HeaderHeightSize - 80)))
+        let progress = -(HeaderOffsetY / HeaderHeightSize) > 1 ? -1 : (HeaderOffsetY > 0 ? 0 : (HeaderOffsetY / (HeaderHeightSize - statusHeight)))
 
-        HStack(spacing: 30) {
-            Circle()
-                .fill(.yellow)
-                .frame(width: 40, height: 40)
+        HStack(spacing: 20) {
+            HStack(spacing: 0) {
+                Image("Sample1")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 100)
+                Image(systemName: "chevron.down").bold()
+                    .font(.caption)
+            }
 
-            Text("サンプル1").bold()
-                .font(.title)
+            Spacer()
+
+            Image(systemName: "heart")
+                .resizable()
+                .frame(width: 24, height: 20)
+
+            Image(systemName: "paperplane")
+                .resizable()
+                .frame(width: 24, height: 24)
+
         }
         .opacity(1 + progress)
-        .padding()
+        .padding(.horizontal)
+        .padding(.vertical, 8)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.purple)
+        .background(Color.white)
     }
 
     func headerOffset(_ previous: CGFloat, _ current: CGFloat) {
-        guard current < 0 else { return } //　上スクロールの上限
+        guard current < 0 else { return }
         if previous > current {
             if direction != .up {
                 direction = .up

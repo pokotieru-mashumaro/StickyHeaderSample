@@ -6,9 +6,9 @@
 import SwiftUI
 
 struct Sample2: View {
-    @State private var offsetY: CGFloat = 0
+    @State var offsetY: CGFloat = 0
 
-    private var statusHeight: CGFloat {
+    var statusHeight: CGFloat {
         let scenes = UIApplication.shared.connectedScenes
         let windowScenes = scenes.first as? UIWindowScene
         let window = windowScenes?.windows.first
@@ -30,7 +30,6 @@ struct Sample2: View {
             }
             .offsetY(coodinateSpace: .named("Sample2")) { offset in
                 offsetY = offset
-                print(offsetY)
             }
         }
         .coordinateSpace(name: "Sample2")
@@ -39,8 +38,6 @@ struct Sample2: View {
 
     @ViewBuilder
     func HeaderView() -> some View {
-        let progress = -(offsetY / 80) > 1 ? -1 : (offsetY > 0 ? 0 : (offsetY / 80))
-
         VStack(spacing: 10) {
             HStack {
                 Circle()
