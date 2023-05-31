@@ -14,13 +14,32 @@ struct Sample2: View {
         let window = windowScenes?.windows.first
         return window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
     }
-    
+
     var body: some View {
         ScrollView(showsIndicators: false) {
+            let progress = -(offsetY / 60) > 1 ? 1 : (offsetY > 0 ? 0 : -(offsetY / 60))
+
             VStack {
                 HeaderView()
                     .offset(y: -offsetY)
+                    .zIndex(2)
+
+                Text("別の会話へ移動")
+                    .lineLimit(1)
+                    .font(.system(size: 17 * (1 - progress)))
+                    .foregroundColor(.gray)
+                    .padding(6)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color.white)
+                    .cornerRadius(6)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(.gray.opacity(0.6), lineWidth: 1.2)
+                    )
+                    .padding(10)
+                    .padding(.horizontal, 120 * progress)
                     .zIndex(1)
+
 
                 ForEach(0..<10, id: \.self) { _ in
                     Rectangle()
@@ -38,20 +57,31 @@ struct Sample2: View {
 
     @ViewBuilder
     func HeaderView() -> some View {
-        VStack(spacing: 10) {
-            HStack {
-                Circle()
-                    .fill(.yellow)
-                    .frame(width: 40, height: 40)
+        HStack {
+            Image("pic")
+                .resizable()
+                .frame(width: 26, height: 26)
+                .scaledToFit()
+                .cornerRadius(6)
 
-                Text("サンプル2").bold()
-                    .font(.title)
-            }
+            Text("布団ちゃんグループ")
+                .fontWeight(.black)
+
+            Spacer()
+
+            Image(systemName: "line.3.horizontal.decrease")
+                .resizable()
+                .fontWeight(.heavy)
+                .frame(width: 12, height: 8)
+
         }
-        .padding([.horizontal, .bottom])
+        .foregroundColor(.white)
+        .padding(.leading)
+        .padding(.trailing, 26)
+        .padding(.bottom, 6)
         .padding(.top, safeArea().top)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color.purple)
+        .background(Color("Sample2"))
     }
 }
 

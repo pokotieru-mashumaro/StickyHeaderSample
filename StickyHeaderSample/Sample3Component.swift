@@ -6,4 +6,4 @@
 import SwiftUI
 
 
-//Sample1と同じものを使用
+//Sample1、2と同じものを使用
