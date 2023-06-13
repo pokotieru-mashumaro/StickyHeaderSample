@@ -5,3 +5,4 @@
 
 import SwiftUI
 
+//Samplse1Componentつかった
