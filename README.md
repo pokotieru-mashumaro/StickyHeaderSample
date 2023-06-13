@@ -1,6 +1,9 @@
 # StickyHeaderSample
 StickyHeaderたちの集会所
 
+個人的にヘッダーはPreferencekeyを使うようにしています。かっこいいからです。
+if文とtransitionメソッドを使っても、きれいなアニメーションになればいいと思います。。
+
 ***
 
 # インスタグラム風
