@@ -16,6 +16,8 @@
 		97B6C3C72A274490008D0BB6 /* Sample3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B6C3C62A274490008D0BB6 /* Sample3.swift */; };
 		97B6C3C92A2744AA008D0BB6 /* Sample3Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B6C3C82A2744AA008D0BB6 /* Sample3Component.swift */; };
 		97B6C3CB2A2756CA008D0BB6 /* StickyHeaderSampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97B6C3CA2A2756CA008D0BB6 /* StickyHeaderSampleApp.swift */; };
+		97EE81D72A388B6C009B6BF9 /* Sample4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE81D62A388B6C009B6BF9 /* Sample4.swift */; };
+		97EE81D92A388B87009B6BF9 /* Sample4Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EE81D82A388B87009B6BF9 /* Sample4Component.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		97B6C3C62A274490008D0BB6 /* Sample3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample3.swift; sourceTree = "<group>"; };
 		97B6C3C82A2744AA008D0BB6 /* Sample3Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample3Component.swift; sourceTree = "<group>"; };
 		97B6C3CA2A2756CA008D0BB6 /* StickyHeaderSampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StickyHeaderSampleApp.swift; sourceTree = "<group>"; };
+		97EE81D62A388B6C009B6BF9 /* Sample4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample4.swift; sourceTree = "<group>"; };
+		97EE81D82A388B87009B6BF9 /* Sample4Component.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sample4Component.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 				97B6C3C42A273450008D0BB6 /* Sample2Component.swift */,
 				97B6C3C62A274490008D0BB6 /* Sample3.swift */,
 				97B6C3C82A2744AA008D0BB6 /* Sample3Component.swift */,
+				97EE81D62A388B6C009B6BF9 /* Sample4.swift */,
+				97EE81D82A388B87009B6BF9 /* Sample4Component.swift */,
 				97B6C3B42A272D7E008D0BB6 /* Assets.xcassets */,
 				97B6C3B62A272D7E008D0BB6 /* Preview Content */,
 			);
@@ -152,12 +158,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97EE81D92A388B87009B6BF9 /* Sample4Component.swift in Sources */,
 				97B6C3CB2A2756CA008D0BB6 /* StickyHeaderSampleApp.swift in Sources */,
 				97B6C3C92A2744AA008D0BB6 /* Sample3Component.swift in Sources */,
 				97B6C3C52A273450008D0BB6 /* Sample2Component.swift in Sources */,
 				97B6C3BF2A272DAD008D0BB6 /* Sample1.swift in Sources */,
 				97B6C3C72A274490008D0BB6 /* Sample3.swift in Sources */,
 				97B6C3C32A273409008D0BB6 /* Sample2.swift in Sources */,
+				97EE81D72A388B6C009B6BF9 /* Sample4.swift in Sources */,
 				97B6C3C12A27332A008D0BB6 /* Sample1Component.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

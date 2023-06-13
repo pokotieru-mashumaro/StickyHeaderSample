@@ -10,7 +10,7 @@ import SwiftUI
 struct StickyHeaderSampleApp: App {
     var body: some Scene {
         WindowGroup {
-            Sample1()
+            Sample4()
         }
     }
 }

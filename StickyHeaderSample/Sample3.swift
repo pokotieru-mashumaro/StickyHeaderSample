@@ -1,7 +1,7 @@
 //
 //  Sample3.swift
 //  StickyHeaderSample
-//
+//アマゾン
 
 import SwiftUI
 

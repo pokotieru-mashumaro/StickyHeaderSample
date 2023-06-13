@@ -1,7 +1,7 @@
 //
 //  Sample2.swift
 //  StickyHeaderSample
-//
+//スラック
 
 import SwiftUI
 

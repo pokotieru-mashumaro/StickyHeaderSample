@@ -1,7 +1,7 @@
 //
 //  Sample1.swift
 //  StickyHeaderSample
-//
+//インスタ
 
 import SwiftUI
 
