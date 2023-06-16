@@ -1,4 +1,4 @@
-# StickyHeaderSample
+# StickyHeaderSample(with SwiftUI)
 StickyHeaderたちの集会所
 
 個人的にヘッダーはPreferencekeyを使うようにしています。かっこいいからです。
